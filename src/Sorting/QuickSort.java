@@ -29,12 +29,13 @@ public class QuickSort {
 
 	  void quickSort(int array[], int low, int high) {
 	    if (low < high) {
-	    	System.out.println("aray =" +Arrays.toString(array));
-
+	    	System.out.println("***** Low="+low+"    "+"High="+high+"  ******");
+	      System.out.println("Array before Partition  =" +Arrays.toString(array));
 	      // Select pivot position and put all the elements smaller 
 	      // than pivot on left and greater than pivot on right
 	      int pi = partition(array, low, high);
 	      System.out.println("pi =" +pi);
+	      System.out.println("Array after Partition  =" +Arrays.toString(array));
 	      
 	      // Sort the elements on the left of pivot
 	      quickSort(array, low, pi - 1);
@@ -46,7 +47,7 @@ public class QuickSort {
 
 	  // Driver code
 	  public static void main(String args[]) {
-	    int[] data = { 8, 7, 2, 1, 0, 9, 6 };
+	    int[] data = { 9, -3, 5, 2, 6, 8, -6,1,3 };
 	    int size = data.length;
 	    QuickSort qs = new QuickSort();
 	    qs.quickSort(data, 0, size - 1);

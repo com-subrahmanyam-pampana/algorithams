@@ -14,6 +14,7 @@ public class InsertionSorting {
 	               greater than key, to one position ahead
 	               of their current position */
 	            while (j >= 0 && arr[j] > key) {
+	            	System.out.println("Entered into while loop  ");
 	                arr[j + 1] = arr[j];
 	                j = j - 1;
 	            }
@@ -26,7 +27,7 @@ public class InsertionSorting {
 	 
 	    public static void main(String args[])
 	    {
-	        int arr[] = { 12, 11, 13, 5, 6 };
+	        int arr[] = {9,5,1,4,3};
 	        doInsertionsort(arr);
 	    }
 }
