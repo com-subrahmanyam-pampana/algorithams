@@ -1,4 +1,4 @@
-package ds;
+package ds.Stacks;
 
 class Stack {
 	  private int arr[];
