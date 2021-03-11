@@ -15,6 +15,8 @@ public class FractionalKnapSack {
 		for (int i = 0; i < wt.length; i++) {
 			iVal[i] = new ItemValue(wt[i], val[i], i);
 		}
+		
+		
 
 		// sorting items by value;
 		Arrays.sort(iVal, new Comparator<ItemValue>() {
@@ -24,20 +26,37 @@ public class FractionalKnapSack {
 				return o2.cost.compareTo(o1.cost);
 			}
 		});
-
+		
+		
+		
+		
+	
 		double totalValue = 0d;
-
+		
+		System.out.println("Weight   Profit    P/V ratio    ");
+for (ItemValue i : iVal) {
+			
+			System.out.println(i.wt+"    "+i.val+"    "+i.cost);}
+		
 		for (ItemValue i : iVal) {
+			
+			
 
 			int curWt = (int)i.wt;
 			int curVal = (int)i.val;
 
 			if (capacity - curWt >= 0) {
 				// this weight can be picked while
+				
+				System.out.println("Capaity"+capacity);
+				System.out.println("curWt"+curWt);
 				capacity = capacity - curWt;
 				totalValue += curVal;
 			}
 			else {
+				System.out.println("Else");
+				System.out.println("else Capaity"+capacity);
+				System.out.println("else curWt"+curWt);
 				// item cant be picked whole
 				double fraction
 					= ((double)capacity / (double)curWt);
@@ -54,14 +73,15 @@ public class FractionalKnapSack {
 	// item value class
 	static class ItemValue {
 		Double cost;
-		double wt, val, ind;
+		double wt, val, index;
 
 		// item value function
+		@SuppressWarnings("deprecation")
 		public ItemValue(int wt, int val, int ind)
 		{
 			this.wt = wt;
 			this.val = val;
-			this.ind = ind;
+			this.index = ind;
 			cost = new Double((double)val / (double)wt);
 		}
 	}

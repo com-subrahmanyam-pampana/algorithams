@@ -108,5 +108,4 @@ public class NQueenProblem {
 		Queen.solveNQ(); 
 	} 
 } 
-// This code is contributed by Abhishek Shankhadhar 
 
