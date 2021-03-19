@@ -1,4 +1,4 @@
-package greedy;
+package greedy_graphs;
 
 public class Dijkstra {
 

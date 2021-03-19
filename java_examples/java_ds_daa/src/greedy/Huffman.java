@@ -3,6 +3,7 @@ package greedy;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Comparator;
+import java.util.Iterator;
 
 // node class is the basic structure
 // of each node present in the Huffman - tree.
@@ -62,19 +63,18 @@ public class Huffman {
 	// main function
 	public static void main(String[] args)
 	{
-
-		Scanner s = new Scanner(System.in);
-
+		
 		// number of characters.
 		int n = 6;
-		char[] charArray = { 'a', 'b', 'c', 'd', 'e', 'f' };
-		int[] charfreq = { 5, 9, 12, 13, 16, 45 };
+		char[] charArray = { 'f', 'b', 'c', 'd', 'e', 'a' };
+		int[] charfreq = { 45, 9, 12, 13, 16, 5 };
 
 		// creating a priority queue q.
 		// makes a min-priority queue(min-heap).
 		PriorityQueue<HuffmanNode> q
 			= new PriorityQueue<HuffmanNode>(n, new MyComparator());
 
+		
 		for (int i = 0; i < n; i++) {
 
 			// creating a Huffman node object
@@ -91,6 +91,15 @@ public class Huffman {
 			// the huffman node to the queue.
 			q.add(hn);
 		}
+		
+		//Printing for test
+		Iterator iterator = q.iterator(); 
+        while (iterator.hasNext()) {
+        	HuffmanNode hn=(HuffmanNode)iterator.next();
+            //System.out.print(hn.c + " ");
+            System.out.print(hn.data + " ");
+        }
+        System.out.println(" ");
 
 		// create a root node
 		HuffmanNode root = null;
