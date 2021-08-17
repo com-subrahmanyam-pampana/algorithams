@@ -1,19 +1,29 @@
-package recursion;
+package recursion.number;
 
 public class PrintFirstNNaturalNumbers {
 	
-	static void  printNNatural(int n){
+	static int  printNNatural(int n){
 		
 		if(n==0) {
-			return;
+			return 0;
 		}
 		System.out.println(n);
-		printNNatural(n-1);
+		return printNNatural(n-1);
 	}
 
 	public static void main(String[] args) {
-		printNNatural(10);
+		int x=printNNatural(10);
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
