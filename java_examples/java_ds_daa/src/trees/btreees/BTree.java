@@ -1,4 +1,4 @@
-package trees;
+package trees.btreees;
 
 //Searching a key on a B-tree in Java 
 

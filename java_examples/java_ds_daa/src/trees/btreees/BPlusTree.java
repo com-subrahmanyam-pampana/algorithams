@@ -1,4 +1,4 @@
-package trees;
+package trees.btreees;
 
 //Searching on a B+ tree in Java
 
