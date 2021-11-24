@@ -1,4 +1,4 @@
-package ds.linkedlist;
+ package ds.linkedlist;
 
 class LinkedList {
 	  // Creating a node
