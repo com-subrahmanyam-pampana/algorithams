@@ -22,6 +22,8 @@ public class RemoveSpaceFromGivenString {
                 charArray[i-numSpaces] = charArray[i];
             }
         }
+        
+        
          
         // all the spaces are moved towards the end of the string. 
         // Create new string by using non-space characters
@@ -35,10 +37,27 @@ public class RemoveSpaceFromGivenString {
     {
         String strWithSpaces    = "  Hi there, how  are you   doing? ";
         String strWithoutSpaces = removeSpaces(strWithSpaces);
-         
+       
         System.out.println(strWithoutSpaces);
     }
+    
+    
+   
 
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

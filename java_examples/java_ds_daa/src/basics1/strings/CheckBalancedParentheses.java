@@ -2,9 +2,6 @@ package basics1.strings;
 
 public class CheckBalancedParentheses {
 	
-	
-	
-	
 	public static boolean isValid(String str) {
 		 
         if (str == null || str.length() == 0) {
@@ -39,8 +36,4 @@ public class CheckBalancedParentheses {
         System.out.println("isValid: " + isValid(str));
     }
     
-	
-	
-	
-
 }

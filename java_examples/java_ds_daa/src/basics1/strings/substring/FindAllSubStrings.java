@@ -4,13 +4,10 @@ public class FindAllSubStrings {
 
 	public static void method2(String str) {
 		int n = str.length();
-		// Function to print all substring using substring method
-		for (int i = 0; i < n; i++) {
-			for (int j = i + 1; j <= n; j++) {
-
-				System.out.println("i =" + i + " j=" + j);
-
-				System.out.println(str.substring(i, j));
+		for (int i = 0; i <= n; i++) {
+			for (int j = i+1; j <= n; j++) {
+				String x=str.substring(i,j);
+				System.out.println(x);
 			}
 		}
 	}
