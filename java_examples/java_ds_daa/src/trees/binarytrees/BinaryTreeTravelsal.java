@@ -1,6 +1,4 @@
-package trees.binarytrees.models;
-
-import trees.binarytrees.models.ds.MyBinaryTree;
+package trees.binarytrees;
 
 public class BinaryTreeTravelsal {
 

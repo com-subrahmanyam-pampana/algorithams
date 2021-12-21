@@ -1,4 +1,4 @@
-package trees.binarytrees.models.ds;
+package trees.binarytrees;
 
 /*Node and tree is in same class*/
 public class MyBinaryTree {

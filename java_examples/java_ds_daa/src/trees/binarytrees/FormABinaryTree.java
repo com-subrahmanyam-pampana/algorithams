@@ -1,25 +1,19 @@
-package trees.binarytrees.models;
-
-import trees.binarytrees.models.ds.MyBinaryTree;
+package trees.binarytrees;
 
 public class FormABinaryTree {
 	
-	// Function to insert nodes in level order
+	/* Function to insert nodes in level order*/
     public static MyBinaryTree insertLevelOrder(int[] arr, MyBinaryTree root,
                                                 int i)
     {
-        // Base case for recursion
+        /* Base case*/
         if (i < arr.length) {
         	MyBinaryTree temp = new MyBinaryTree(arr[i]);
             root = temp;
- 
-            // insert left child
-            root.left = insertLevelOrder(arr, root.left,
-                                             2 * i + 1);
- 
-            // insert right child
-            root.right = insertLevelOrder(arr, root.right,
-                                               2 * i + 2);
+            /* insert left child*/
+            root.left = insertLevelOrder(arr, root.left,2 * i + 1);
+            /* insert right child*/
+            root.right = insertLevelOrder(arr, root.right,2 * i + 2);
         }
         return root;
     }

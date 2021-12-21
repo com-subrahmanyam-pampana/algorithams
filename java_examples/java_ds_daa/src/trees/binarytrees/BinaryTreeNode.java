@@ -1,4 +1,4 @@
-package trees.binarytrees.models.ds;
+package trees.binarytrees;
 
 public class BinaryTreeNode {
 	public int value;
