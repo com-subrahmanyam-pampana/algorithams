@@ -1,15 +1,19 @@
 package trees.binarytrees;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
+
+import trees.binarytrees.set1.BinaryTreePaths;
 
 public class BinaryTreeHelper {
 
 	///////////////////////////////////////
 	////////////*Height *//////////////////
 	///////////////////////////////////////
-	public int getHeightOfABinaryTree(MyBinaryTree tree){
+	public static int getHeightOfABinaryTree(MyBinaryTree tree){
 		if(tree==null) {
 			return 0;
 		}
@@ -58,6 +62,29 @@ public class BinaryTreeHelper {
         return height;
     }
 	
+	boolean isBalanced(MyBinaryTree node)
+    {
+        int lh; /* for height of left subtree */
+ 
+        int rh; /* for height of right subtree */
+ 
+        /* If tree is empty then return true */
+        if (node == null)
+            return true;
+ 
+        /* Get the height of left and right sub trees */
+        lh = getHeightOfABinaryTree(node.left);
+        rh = getHeightOfABinaryTree(node.right);
+ 
+        if (Math.abs(lh - rh) <= 1
+            && isBalanced(node.left)
+            && isBalanced(node.right))
+            return true;
+ 
+        /* If we reach here then tree is not height-balanced */
+        return false;
+    }
+	
 	
 	//////////////////////////////////////
 	////////////*Depth*///////////////////
@@ -92,6 +119,58 @@ public class BinaryTreeHelper {
     	 return 1+getNumberOfNodesInBinaryTree(node.left)+getNumberOfNodesInBinaryTree(node.right);
     	 
      }
+     
+     
+  // Recursive function to find level of Node 'ptr' in
+     // a binary tree
+     int getlevelOfANode(MyBinaryTree node, MyBinaryTree ptr, int lev)
+     {
+         // base cases
+         if (node == null)
+             return 0;
+  
+         if (node == ptr)
+             return lev;
+  
+         // Return level if Node is present in left subtree
+         int l = getlevelOfANode(node.left, ptr, lev + 1);
+         if (l != 0)
+             return l;
+  
+         // Else search in right subtree
+         return getlevelOfANode(node.right, ptr, lev + 1);
+     }
+     
+  // Recursive function to check if two Nodes are
+     // siblings
+     boolean areTwoNodesSibling(MyBinaryTree node, MyBinaryTree a, MyBinaryTree b)
+     {
+         // Base case
+         if (node == null)
+             return false;
+  
+         return ((node.left == a && node.right == b) ||
+                 (node.left == b && node.right == a) ||
+                 areTwoNodesSibling(node.left, a, b) ||
+                 areTwoNodesSibling(node.right, a, b));
+     }
+     
+     
+     // Returns 1 if a and b are cousins, otherwise 0
+     boolean isCousin(MyBinaryTree node, MyBinaryTree a, MyBinaryTree b)
+     {
+         // 1. The two Nodes should be on the same level
+         //       in the binary tree.
+         // 2. The two Nodes should not be siblings (means
+         //    that they should not have the same parent
+         //    Node).
+    	 
+    	 int l1=getlevelOfANode(node, a, 1);
+    	 int l2=getlevelOfANode(node, b, 1);
+    	 boolean areSiblings=areTwoNodesSibling(node, a, b);
+         return (l1==l2)&&(!areSiblings);
+     }
+     
      
   // Method to calculate the diameter
      //This tahes O(n^2)
@@ -148,7 +227,7 @@ public class BinaryTreeHelper {
                          Math.max(ldiameter, rdiameter));
      }
   
-     // A wrapper over diameter(Node root)
+     
      int getDiameter(MyBinaryTree root)
      {
          Height height = new Height();
@@ -354,7 +433,7 @@ public class BinaryTreeHelper {
         return true;
     }
 	
-	static boolean isSkewedBT(Node root)
+	static boolean isSkewedBT(MyBinaryTree root)
 	{
 	    // check if node is null or is a leaf node
 	    if (root == null || (root.left == null &&
@@ -370,7 +449,101 @@ public class BinaryTreeHelper {
 	    return isSkewedBT(root.right);
 	}
 	
+	/*LCA*/
+	 private List<Integer> lcaPath1 = new ArrayList<>();
+	 private List<Integer> lcaPath2 = new ArrayList<>();
+	// Finds the path from root node to given root of the tree.
+	 int findLCA(int n1, int n2,MyBinaryTree root) {
+		 lcaPath1.clear();
+		 lcaPath2.clear();
+	     return findLCAInternal(root, n1, n2);
+	 }
+
+	 private int findLCAInternal(MyBinaryTree root, int n1, int n2) {
+		 boolean b1=BinaryTreePaths.findPathFromRootToGivenNode(root, n1, lcaPath1);
+		 boolean b2=BinaryTreePaths.findPathFromRootToGivenNode(root, n2, lcaPath2);
+	     if (!b1 || !b2) {
+	         /*n1 or n2 element  is missing from tree*/
+	         return -1;
+	     }
+
+	     int i;
+	     for (i = 0; i < lcaPath1.size() && i < lcaPath2.size(); i++) {
+	         if (!lcaPath1.get(i).equals(lcaPath2.get(i)))
+	             break;
+	     }
+	     return lcaPath1.get(i-1);
+	 }
+	 
+	 static boolean v1 = false, v2 = false;
+	 
+	    // This function returns pointer to LCA of two given
+	    // values n1 and n2.
+	    // v1 is set as true by this function if n1 is found
+	    // v2 is set as true by this function if n2 is found
+	 MyBinaryTree findLCAUtil(MyBinaryTree node, int n1, int n2)
+	    {
+	        // Base case
+	        if (node == null)
+	            return null;
+	         
+	        //Store result in temp, in case of key match so that we can search for other key also.
+	        MyBinaryTree temp=null;
+	 
+	        // If either n1 or n2 matches with root's key, report the presence
+	        // by setting v1 or v2 as true and return root (Note that if a key
+	        // is ancestor of other, then the ancestor key becomes LCA)
+	        if (node.value == n1)
+	        {
+	            v1 = true;
+	            temp = node;
+	        }
+	        if (node.value == n2)
+	        {
+	            v2 = true;
+	            temp = node;
+	        }
+	 
+	        // Look for keys in left and right subtrees
+	        MyBinaryTree left_lca = findLCAUtil(node.left, n1, n2);
+	        MyBinaryTree right_lca = findLCAUtil(node.right, n1, n2);
+	 
+	        if (temp != null)
+	            return temp;
+	 
+	        // If both of the above calls return Non-NULL, then one key
+	        // is present in once subtree and other is present in other,
+	        // So this node is the LCA
+	        if (left_lca != null && right_lca != null)
+	            return node;
+	 
+	        // Otherwise check if left subtree or right subtree is LCA
+	        return (left_lca != null) ? left_lca : right_lca;
+	    }
+	 
+	    // Finds lca of n1 and n2 under the subtree rooted with 'node'
+	 MyBinaryTree findLCA2(int n1, int n2,MyBinaryTree root)
+	    {
+	        // Initialize n1 and n2 as not visited
+	        v1 = false;
+	        v2 = false;
+	 
+	        // Find lca of n1 and n2 using the technique discussed above
+	        MyBinaryTree lca = findLCAUtil(root, n1, n2);
+	 
+	        // Return LCA only if both n1 and n2 are present in tree
+	        if (v1 && v2)
+	            return lca;
+	 
+	        // Else return NULL
+	        return null;
+	    }
+
 	
+	// Function to check if a given node is a leaf node or not
+	    public static boolean isLeaf(MyBinaryTree node) {
+	        return (node.left == null && node.right == null);
+	    }
 
 
 

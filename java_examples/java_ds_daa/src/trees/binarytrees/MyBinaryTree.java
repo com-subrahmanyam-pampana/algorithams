@@ -1,6 +1,6 @@
 package trees.binarytrees;
 
-/*Node and tree is in same class*/
+/*  Binart tree model class*/
 public class MyBinaryTree {
 	public int value;
 	public MyBinaryTree left;

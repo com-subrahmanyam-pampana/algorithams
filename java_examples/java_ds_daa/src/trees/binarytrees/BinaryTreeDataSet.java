@@ -1,16 +1,28 @@
 package trees.binarytrees;
 
+import trees.binarytrees.set1.BinaryTreePaths;
+import trees.binarytrees.set1.BinaryTreeViews;
+import trees.binarytrees.set1.MirrorAndSym;
+import trees.binarytrees.travelsal.BTInorder;
+import trees.binarytrees.travelsal.BTLevelOrder;
+
+import trees.binarytrees.travelsal.BinaryTreeTravelsal;
+
 public class BinaryTreeDataSet extends BinaryTreeHelper{
 	
-	public MyBinaryTree getASimpleBinaryTree1(){
-		MyBinaryTree tree=new MyBinaryTree(12);
-		tree.left=new MyBinaryTree(14);
-		tree.right=new MyBinaryTree(15);
-		
+	public static MyBinaryTree getASimpleBinaryTree1(){
+		MyBinaryTree tree=new MyBinaryTree(2);
+		tree.left=new MyBinaryTree(1);
+		tree.right=new MyBinaryTree(3);
 		return tree;
 	}
 	
 	public static MyBinaryTree getASimpleBinaryTree2(){
+		
+		/*              15               */
+		/*     10                 20      */
+		/* 8       12           16    25  */
+		
 		MyBinaryTree root=new MyBinaryTree(15);
 		 root.left = new MyBinaryTree(10);
 	      root.right = new MyBinaryTree(20);
@@ -18,6 +30,8 @@ public class BinaryTreeDataSet extends BinaryTreeHelper{
 	      root.left.right = new MyBinaryTree(12);
 	      root.right.left = new MyBinaryTree(16);
 	      root.right.right = new MyBinaryTree(25);
+	      
+	      
 		return root;
 	}
 	
@@ -40,7 +54,6 @@ public class BinaryTreeDataSet extends BinaryTreeHelper{
 		MyBinaryTree tree = new MyBinaryTree();
 		int arr[] = { 1, 2, 3, 4, 5, 9, 9, 9, 9 };
 		tree =FormABinaryTree.getCompleteBinaryTreeFromAnArray(arr);
-		BinaryTreeTravelsal.inOrder(tree);
 		return tree;
         
 	}
@@ -91,8 +104,11 @@ public class BinaryTreeDataSet extends BinaryTreeHelper{
 		//int h=BinaryTreeHelper.heightofABinaryTreeIteration(tree);
 		//System.out.println(h);
 		
-		boolean b=isCompleteBT2(getASimpleNonCompleteBinary());
-		System.out.println(b);
+		//boolean b=isCompleteBT2(getASimpleNonCompleteBinary());
+		//System.out.println(b);
+		
+		//BinaryTreeViews.bottomView2(getASimpleBinaryTree2());
+		BinaryTreePaths.printRootToleafPathIterative(getASimpleBinaryTree2());
 		
 	}
 
