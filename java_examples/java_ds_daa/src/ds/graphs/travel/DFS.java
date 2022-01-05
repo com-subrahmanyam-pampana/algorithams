@@ -1,90 +1,90 @@
 package ds.graphs.travel;
 
-
-
-//Java program to print DFS
-//mtraversal from a given given
-//graph
 import java.io.*;
 import java.util.*;
 
-//This class represents a 
-//directed graph using adjacency
-//list representation
-class DFS {
-	private int V; // No. of vertices
+import ds.graphs.models.AdjacencyListGraph;
 
-	// Array of lists for 
-	// Adjacency List Representation
-	private LinkedList<Integer> adj[];
 
-	// Constructor
-	@SuppressWarnings("unchecked") DFS(int v)
-	{
-		V = v;
-		adj = new LinkedList[v];
-		for (int i = 0; i < v; ++i)
-			adj[i] = new LinkedList();
-	}
+public class DFS {
+	
+	// prints all not yet visited vertices reachable from s
+    public static void iterationDFS(int s,AdjacencyListGraph graph)
+    {
+        // Initially mark all vertices as not visited
+        Vector<Boolean> visited = new Vector<Boolean>(graph.getNoOfNodes());
+        for (int i = 0; i < graph.getNoOfNodes(); i++)
+            visited.add(false);
+ 
+        // Create a stack for DFS
+        Stack<Integer> stack = new Stack<>();
+         
+        // Push the current source node
+        stack.push(s);
+         
+        while(stack.empty() == false)
+        {
+            // Pop a vertex from stack and print it
+            s = stack.peek();
+            stack.pop();
+             
+            // Stack may contain same vertex twice. So
+            // we need to print the popped item only
+            // if it is not visited.
+            if(visited.get(s) == false)
+            {
+                System.out.print(s + " ");
+                visited.set(s, true);
+            }
+             
+            // Get all adjacent vertices of the popped vertex s
+            // If a adjacent has not been visited, then push it
+            // to the stack.
+            ArrayList<ArrayList<Integer>> list = graph.getList();
+    		ArrayList<Integer> currentNodeAdjectElements=list.get(s);
+            Iterator<Integer> itr =currentNodeAdjectElements.iterator();
+             
+            while (itr.hasNext())
+            {
+                int v = itr.next();
+                if(!visited.get(v))
+                    stack.push(v);
+            }
+             
+        }
+    }
 
-	// Function to add an edge into the graph
-	void addEdge(int v, int w)
-	{
-		adj[v].add(w); // Add w to v's list.
-	}
-
+	
 	// A function used by DFS
-	void DFSUtil(int v, boolean visited[])
+	static void DFSUtil(int v, boolean visited[],AdjacencyListGraph graph)
 	{
 		// Mark the current node as visited and print it
 		visited[v] = true;
 		System.out.print(v + " ");
-
-		// Recur for all the vertices adjacent to this
-		// vertex
-		Iterator<Integer> i = adj[v].listIterator();
+		/* Recur for all the vertices adjacent to this vertex*/
+		ArrayList<ArrayList<Integer>> list = graph.getList();
+		ArrayList<Integer> currentNodeAdjectElements=list.get(v);
+		Iterator<Integer> i = currentNodeAdjectElements.listIterator();
 		while (i.hasNext()) 
 		{
 			int n = i.next();
 			if (!visited[n])
-				DFSUtil(n, visited);
+				DFSUtil(n, visited,graph);
 		}
 	}
 
 	// The function to do DFS traversal.
 	// It uses recursive
 	// DFSUtil()
-	void DFS(int v)
+	public static void recursionDFS(int v,AdjacencyListGraph graph)
 	{
-		// Mark all the vertices as 
-		// not visited(set as
-		// false by default in java)
-		boolean visited[] = new boolean[V];
-
-		// Call the recursive helper 
-		// function to print DFS
-		// traversal
-		DFSUtil(v, visited);
+		/* Mark all the vertices as  not visited(set as false by default in java)*/
+		boolean visited[] = new boolean[graph.getNoOfNodes()];
+		/*Call the recursive helper function to print DFS traversal*/
+		DFSUtil(v, visited,graph);
 	}
 
-	// Driver Code
-	public static void main(String args[])
-	{
-		DFS g = new DFS(4);
-
-		g.addEdge(0, 1);
-		g.addEdge(0, 2);
-		g.addEdge(1, 2);
-		g.addEdge(2, 0);
-		g.addEdge(2, 3);
-		g.addEdge(3, 3);
-
-		System.out.println(
-			"Following is Depth First Traversal "
-			+ "(starting from vertex 2)");
-
-		g.DFS(2);
-	}
+	
 }
-//This code is contributed by Aakash Hasija
+
 

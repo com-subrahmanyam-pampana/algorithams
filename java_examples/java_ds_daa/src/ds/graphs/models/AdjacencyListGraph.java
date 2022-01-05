@@ -17,6 +17,12 @@ public class AdjacencyListGraph {
     public ArrayList<ArrayList<Integer>> getList() {
     	return arrayOfLinkedLists;
     }
+    public int getNoOfNodes() {
+    	return arrayOfLinkedLists.size();
+    }
+    public int getNoEdges() {
+    	return arrayOfLinkedLists.size();
+    }
  
     public  void addEdge(int source, int distination) {
     	arrayOfLinkedLists.get(source).add(distination);
