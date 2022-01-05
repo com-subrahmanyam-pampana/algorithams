@@ -4,66 +4,44 @@ import java.util.Arrays;
 
 
 
-public class Test {
-	
-	
-	
-	
-	public static class MyTreeClass {
-		public int value;
-		public MyTreeClass left;
-		public  MyTreeClass right;
-		
-		MyTreeClass(){
-			this.left=null;
-			this.right=null;
-		}
-		
-	}
-	
-	public static   MyTreeClass  getATree() {
-		MyTreeClass tree=new MyTreeClass();
-		tree.value=4;
-		tree.left=new MyTreeClass();
-		tree.left.value=8;
-		tree.right=new MyTreeClass();
-		tree.right.value=10;
-		return tree;
-	}
-	
-	public static void  printBranch() {
-		int[] a=new int[2];
-		 MyTreeClass tree=getATree();
-		 printBrachByBranch(tree,0);
-		 
-		
-		
-		
-	}
-	public static void printBrachByBranch(MyTreeClass node,int runningSum){
-		if(node==null) {
-			return;
-		}
-		int newRunningSum=runningSum+node.value;
-		if(node.left==null && node.right==null) {
-			System.out.println(newRunningSum);
-		}
-		printBrachByBranch(node.left,newRunningSum);
-		printBrachByBranch(node.right,newRunningSum);
-	}
-	
+	import java.util.*;
 
-	public static void main(String[] args) {
-		int[] a=new int[2];
-		test(a);
-		printBranch();
-		
+	class Test {
 
-	}
-	
-	static void test(int[] b) {
-		b[1]=1;
-		b[0]=2;
+	  // Add edge
+	  static void addEdge(ArrayList<ArrayList<Integer>> am, int s, int d) {
+	    am.get(s).add(d);
+	    am.get(d).add(s);
+	  }
+
+	  public static void main(String[] args) {
+
+	    // Create the graph
+	    int V = 5;
+	    ArrayList<ArrayList<Integer>> am = new ArrayList<ArrayList<Integer>>(V);
+
+	    for (int i = 0; i < V; i++)
+	      am.add(new ArrayList<Integer>());
+
+	    // Add edges
+	    addEdge(am, 0, 1);
+	    addEdge(am, 0, 2);
+	    addEdge(am, 0, 3);
+	    addEdge(am, 1, 2);
+
+	    printGraph(am);
+	  }
+
+	  // Print the graph
+	  static void printGraph(ArrayList<ArrayList<Integer>> am) {
+	    for (int i = 0; i < am.size(); i++) {
+	      System.out.println("\nVertex " + i + ":");
+	      for (int j = 0; j < am.get(i).size(); j++) {
+	        System.out.print(" -> " + am.get(i).get(j));
+	      }
+	      System.out.println();
+	    }
+	  }
 	}
 
-}
+
