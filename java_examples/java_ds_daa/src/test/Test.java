@@ -5,6 +5,10 @@ import java.util.Arrays;
 
 
 public class Test {
+	
+	
+	
+	
 	public static class MyTreeClass {
 		public int value;
 		public MyTreeClass left;

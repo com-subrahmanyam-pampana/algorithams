@@ -1,4 +1,4 @@
-package greedy;
+package greedy.set1;
 
 //Program to find the maximum profit 
 //job sequence from a given array 
@@ -34,11 +34,11 @@ class Job
 		Collections.sort(arr, 
 						(a, b) -> b.profit - a.profit); 
 
-		// To keep track of free time slots 
+		/* To keep track of free time slots*/ 
 		boolean result[] = new boolean[t]; 
 
-		// To store result (Sequence of jobs) 
-		char job[] = new char[t]; 
+		/* To store result (Sequence of jobs)*/ 
+		char finalJobs[] = new char[t]; 
 
 		// Iterate through all given jobs 
 		for (int i = 0; i < n; i++) 
@@ -54,14 +54,14 @@ class Job
 				if (result[j] == false) 
 				{ 
 					result[j] = true; 
-					job[j] = arr.get(i).id; 
+					finalJobs[j] = arr.get(i).id; 
 					break; 
 				} 
 			} 
 		} 
 
 		// Print the sequence 
-		for (char jb : job) 
+		for (char jb : finalJobs) 
 		{ 
 			System.out.print(jb + " "); 
 		} 

@@ -1,28 +1,22 @@
-package trees.bst;
+package trees.bst.set1;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-//A class to store a binary tree node
-class Node {
-	int data;
-	Node left, right;
+import trees.binarytrees.MyBinaryTree;
 
-	Node(int data) {
-		this.data = data;
-	}
-}
 
-class KthSmallestElementinBST {
+
+class KthSmallestElementBST {
 	// Recursive function to find the k'th smallest node
 	// in the BST (using inorder traversal)
-	public static Node kthSmallest(Node root, AtomicInteger counter, int k) {
+	public static MyBinaryTree kthSmallest(MyBinaryTree root, AtomicInteger counter, int k) {
 		// base case
 		if (root == null) {
 			return null;
 		}
 
 		// recur for the left subtree
-		Node left = kthSmallest(root.left, counter, k);
+		MyBinaryTree left = kthSmallest(root.left, counter, k);
 
 		// if k'th smallest node is found
 		if (left != null) {
@@ -40,7 +34,7 @@ class KthSmallestElementinBST {
 	}
 
 	// Function to find the k'th smallest node in the BST
-	public static Node findKthSmallest(Node root, int k) {
+	public static MyBinaryTree findKthSmallest(MyBinaryTree root, int k) {
 		// Counter to keep track of the total number of the visited nodes.
 		// `AtomicInteger` is used here since `Integer` is passed by value in Java
 		AtomicInteger counter = new AtomicInteger(0);
@@ -54,21 +48,21 @@ class KthSmallestElementinBST {
 		 * Construct the following BST 15 / \ / \ 10 20 / \ / \ / \ / \ 8 12 16 25
 		 */
 
-		Node root = new Node(15);
-		root.left = new Node(10);
-		root.right = new Node(20);
-		root.left.left = new Node(8);
-		root.left.right = new Node(12);
-		root.right.left = new Node(16);
-		root.right.right = new Node(25);
+		MyBinaryTree root = new MyBinaryTree(15);
+		root.left = new MyBinaryTree(10);
+		root.right = new MyBinaryTree(20);
+		root.left.left = new MyBinaryTree(8);
+		root.left.right = new MyBinaryTree(12);
+		root.right.left = new MyBinaryTree(16);
+		root.right.right = new MyBinaryTree(25);
 
 		int k = 4;
 
 		// find the k'th smallest node
-		Node result = findKthSmallest(root, k);
+		MyBinaryTree result = findKthSmallest(root, k);
 
 		if (result != null) {
-			System.out.printf("%d'th smallest node is %d", k, result.data);
+			System.out.printf("%d'th smallest node is %d", k, result.value);
 		} else {
 			System.out.printf("%d'th smallest node does not exist.", k);
 		}

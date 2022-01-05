@@ -66,8 +66,8 @@ public class Huffman {
 		
 		// number of characters.
 		int n = 6;
-		char[] charArray = { 'f', 'b', 'c', 'd', 'e', 'a' };
-		int[] charfreq = { 45, 9, 12, 13, 16, 5 };
+		char[] charArray = { 'a', 'b', 'c', 'd', 'e', 'f' };
+		int[] charfreq = { 10, 20, 30, 40, 50, 60 };
 
 		// creating a priority queue q.
 		// makes a min-priority queue(min-heap).
@@ -145,4 +145,8 @@ public class Huffman {
 }
 
 // This code is contributed by Kunwar Desh Deepak Singh
+
+
+
+
 
