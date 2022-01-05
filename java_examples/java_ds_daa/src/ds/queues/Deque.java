@@ -1,4 +1,4 @@
-package ds;
+package ds.queues;
 
 //Deque implementation in Java
 

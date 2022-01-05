@@ -1,4 +1,4 @@
-package dsother;
+package ds.dsother;
 
 //Java Program for union-find algorithm to detect cycle in a graph
 import java.util.*;
