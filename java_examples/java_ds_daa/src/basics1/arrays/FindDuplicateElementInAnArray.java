@@ -1,4 +1,4 @@
-package basics1.arrays.simple;
+package basics1.arrays;
 
 public class FindDuplicateElementInAnArray {
 	

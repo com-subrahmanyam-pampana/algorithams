@@ -1,4 +1,4 @@
-package basics1.strings;
+package basics1.strings.permutations;
 
 import java.util.HashSet;
 
@@ -26,7 +26,7 @@ public class AllPermutationsString {
     }
      
     public static void main(String[] args) {
-        String str = "abc";
+        String str = "ab";
         HashSet<String> permutations = getAllPermutations(str);
         System.out.println(permutations.toString());
     }
