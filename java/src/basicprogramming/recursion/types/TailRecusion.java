@@ -1,9 +1,10 @@
 package basicprogramming.recursion.types;
 
+import java.util.Arrays;
+
 public class TailRecusion {
 	
-	//Factorial of a number
-	
+	/*Factorial of a number*/
 	static int tradationalFactorial(int number) {
 		if(number==0) {
 			return 1;
@@ -20,10 +21,7 @@ public class TailRecusion {
 		}
 	}
 	
-	
-	
-	//Sum of n natural numbers
-	
+	/*Sum of n natural numbers*/
 	static int recsum(int x) {
 	    if (x == 1) {
 	        return x;
@@ -39,10 +37,29 @@ public class TailRecusion {
 	        return tailrecsum(x - 1, running_total + x);
 	    }
 	}
+	
+	/*Reverse an array*/
+	
+	static void reverseanArrayH() {
+		int[] myArray=new int[5];
+		myArray= new  int[]{1,2,3,4,5};
+		int[] reversedArray=reverseAnArray(myArray,0,myArray.length-1);
+		System.out.println(Arrays.toString(reversedArray));
+	}
+	
+	static int[] reverseAnArray(int[] array,int start,int end) {
+		/*Recursion technique to reverse an array */
+		if(start<end) {
+			return array ;
+		}else {
+			int temp=array[end];
+			array[end]=array[start];
+			array[start]=temp;
+			return reverseAnArray(array,start+1,end-1);
+		}
+	}
 
 
-	
-	
 	public static void main(String args[]) {
 		
 		int x=tailFactorial(5,5);
