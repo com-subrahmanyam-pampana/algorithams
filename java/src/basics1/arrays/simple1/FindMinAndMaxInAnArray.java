@@ -11,12 +11,12 @@ public class FindMinAndMaxInAnArray {
 	static void test() {
 		/*Iteration*/
 		int[] myArray=new int[5];
-		myArray= new  int[]{2,2,9,3,4,0,7,5};
+		myArray= new  int[]{2,2,9,3,4,1,7,5};
 		minMaxInanArray(myArray);
 		minMaxInanArray2(myArray);
 		/*Recursion*/
-		recursion1(myArray);
-		System.out.println("");
+		int minValue=recursion1(myArray,myArray.length-1,myArray[myArray.length-1]);
+		System.out.println(minValue);
 	}
 	
 	private static  void  minMaxInanArray(int[] myArray){
@@ -76,8 +76,14 @@ public class FindMinAndMaxInAnArray {
 	  }
      
      
-     static void  recursion1(int[] myArray){
-    	 
+     static int  recursion1(int[] myArray,int i,int minValue){
+    	 //Get Min value
+    	 if(i<0) {
+    		 return minValue;
+    	 }else {
+    		 int min=minValue<myArray[i]?minValue:myArray[i];
+    		 return recursion1(myArray,i-1,min);
+    	 }
      }
      
      
