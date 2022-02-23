@@ -1,4 +1,4 @@
-package basics1.strings.listofwords;
+package a.strings.listofwords;
 
 public class WordBreakProblem {
 

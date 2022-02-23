@@ -1,4 +1,4 @@
-package basics1.strings.maths;
+package a.strings.maths;
 
 public class MyAtoi {
 

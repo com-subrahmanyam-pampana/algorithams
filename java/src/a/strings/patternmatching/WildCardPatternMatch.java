@@ -1,4 +1,4 @@
-package basics1.strings.patternmatching;
+package a.strings.patternmatching;
 
 public class WildCardPatternMatch {
 

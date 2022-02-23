@@ -15,7 +15,7 @@ Examples:
 */             
   
 
-package basics1.strings.slidingwindow;
+package a.strings.slidingwindow;
 
 
 public class AnagramSubStringSearch {

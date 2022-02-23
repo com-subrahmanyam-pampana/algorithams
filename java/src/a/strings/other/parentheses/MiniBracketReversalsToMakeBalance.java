@@ -1,4 +1,4 @@
-package basics1.strings.other.parentheses;
+package a.strings.other.parentheses;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package basics1.strings.interleaving;
+package a.strings.interleaving;
 
 
 /*

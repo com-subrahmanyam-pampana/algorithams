@@ -1,4 +1,4 @@
-package basics1.strings.combinations;
+package a.strings.combinations;
 
 import java.util.Arrays;
 import java.util.HashSet;

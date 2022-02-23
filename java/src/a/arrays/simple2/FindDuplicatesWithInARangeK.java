@@ -1,4 +1,4 @@
-package basics1.arrays.simple2;
+package a.arrays.simple2;
 
 import java.util.HashSet;
 import java.util.Set;

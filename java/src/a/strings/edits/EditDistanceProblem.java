@@ -1,4 +1,4 @@
-package basics1.strings.edits;
+package a.strings.edits;
 
 public class EditDistanceProblem {
 

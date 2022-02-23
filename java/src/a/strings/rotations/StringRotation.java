@@ -1,4 +1,4 @@
-package basics1.strings.rotations;
+package a.strings.rotations;
 
 public class StringRotation {
 

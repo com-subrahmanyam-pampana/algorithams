@@ -1,4 +1,4 @@
-package basics1.strings.patternsearching;
+package a.strings.patternsearching;
 
 public class RabinKarpAlgorithm {
 	public final static int d = 10;

@@ -1,4 +1,4 @@
-package basics1.strings.patternsearching;
+package a.strings.patternsearching;
 
 import java.util.Arrays;
 

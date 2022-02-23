@@ -1,4 +1,4 @@
-package basics1.strings.palindrome.longestpalindromsubstring;
+package a.strings.palindrome.longestpalindromsubstring;
 
 public class ManachersAlgorithm {
 	

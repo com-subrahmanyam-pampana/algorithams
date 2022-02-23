@@ -1,4 +1,4 @@
-package basics1.strings.slidingwindow;
+package a.strings.slidingwindow;
 
 import java.util.HashSet;
 import java.util.Set;

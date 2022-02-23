@@ -1,4 +1,4 @@
-package basics1.strings.pangram;
+package a.strings.pangram;
 
 public class Panagram {
 

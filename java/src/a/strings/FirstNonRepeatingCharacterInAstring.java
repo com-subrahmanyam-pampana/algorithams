@@ -1,4 +1,4 @@
-package basics1.strings;
+package a.strings;
 
 public class FirstNonRepeatingCharacterInAstring {
 	
