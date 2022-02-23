@@ -1,8 +1,9 @@
-package a.arrays.set1;
+package a.arrays.s1;
 
 /*
-  Find sum of all elements in an array 
+  Find sum of all elements in an given array. 
  */
+
 public class SumOfAllElements {
 
 //////////////////////////////////////
@@ -42,6 +43,9 @@ public class SumOfAllElements {
 		return sum;
 	}
 
+//////////////////////////////////////
+/////////Main/////////////////////
+/////////////////////////////////////
 	public static void main(String[] args) {
 
 		int[] myArray = new int[5];
@@ -52,9 +56,9 @@ public class SumOfAllElements {
 
 		int sum2 = recursion2(myArray, 0, myArray.length - 1);
 		System.out.println(sum2);
-		
+
 		int sum3 = iteration1(myArray);
-		System.out.println(sum2);
-		
+		System.out.println(sum3);
+
 	}
 }
