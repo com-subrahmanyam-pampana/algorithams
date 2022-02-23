@@ -129,14 +129,18 @@ public class Find4ElementsThatSumToAGivenValue {
     static void method2(int arr[], int n, int X)
     {
         // Store sums of all pairs in a hash table
-        HashMap<Integer, pair> mp
-            = new HashMap<Integer, pair>();
-        for (int i = 0; i < n - 1; i++)
-            for (int j = i + 1; j < n; j++)
-                mp.put(arr[i] + arr[j], new pair(i, j));
+        HashMap<Integer, pair> mp = new HashMap<Integer, pair>();
+        for (int i = 0; i < (arr.length - 1); i++) {
+        	 for (int j = i + 1; j < n; j++) {
+        		 mp.put(arr[i] + arr[j], new pair(i, j));
+        	 }        
+        }
+        
+        System.out.println(mp);
+           
  
-        // Traverse through all pairs and search
-        // for X - (current pair sum).
+        /* Traverse through all pairs and search
+         for X - (current pair sum).*/
         for (int i = 0; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 int sum = arr[i] + arr[j];
@@ -165,9 +169,8 @@ public class Find4ElementsThatSumToAGivenValue {
 	// Driver code
 	static public void main(String[] args)
 	{
-	    int[] arr = { 10, 20, 30, 40, 1, 2 };
-	    int X = 91;
-	 
+	    int[] arr = { 10, 2, 3, 4, 5, 9, 7, 8 };
+	    int X = 23;
 	    // Function call
 	    method2(arr,arr.length, X);
 	}
