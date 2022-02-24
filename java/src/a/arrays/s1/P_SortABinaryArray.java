@@ -1,4 +1,4 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ Input : 1 0 1 0 1 0 1 0
 Output : 0 0 0 0 1 1 1 1
 Explanation: The output is a sorted array of 0 and 1
  * */
-public class SortABinaryArray {
+public class P_SortABinaryArray {
 //////////////////////////////////////
 /////////Method1 Linear//////////////
 /////////////////////////////////////

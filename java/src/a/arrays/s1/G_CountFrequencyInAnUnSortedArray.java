@@ -1,10 +1,10 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 /*
 Count Number of occurences in a sorted array
 [1,2,2,2,2,3,4,7,8,8],number 2
 * */
-public class CountFrequencyInAnUnSortedArray {
+public class G_CountFrequencyInAnUnSortedArray {
 
 //////////////////////////////////////
 /////////Method1 /////////////////////

@@ -1,4 +1,4 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 
 /*
@@ -46,7 +46,7 @@ Here,   [48]
  
  * */
 
-public class SumTraingleFromAnArray {
+public class H_SumTraingleFromAnArray {
 	
 	public static void main(String[] args) {
 		test();

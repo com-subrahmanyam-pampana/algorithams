@@ -1,4 +1,4 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 
 /*
@@ -6,7 +6,7 @@ package a.arrays.s2;
  Number of 1's=3
  Number of 0's=3
  * */
-public class CheckIfArrayHasEqualNumberOf0sAnd1s {
+public class F_CheckIfArrayHasEqualNumberOf0sAnd1s {
 	
 	static boolean method1(int[] a,int n) {
 		/*Replace all 0s with -1 then total sum should be zero */

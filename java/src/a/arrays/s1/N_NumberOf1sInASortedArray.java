@@ -1,4 +1,4 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 /*
  Given a sorted binary array, efficiently count the total number of 1’s in it.
@@ -15,7 +15,7 @@ Input:  nums[] = [0, 0, 1, 1, 1, 1, 1]
 Output: The total number of 1’s present is 5 
  
  * */
-public class NumberOf1sInASortedArray {
+public class N_NumberOf1sInASortedArray {
 
 //////////////////////////////////////
 /////////Method1 Linear//////////////

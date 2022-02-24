@@ -1,6 +1,6 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
-public class FindDuplicateElementInAnArray {
+public class M_FindDuplicateElementInAnArray {
 	
 	
 	 // Function to find a duplicate element in a limited range array
@@ -98,8 +98,6 @@ public class FindDuplicateElementInAnArray {
         int arr_size = arr.length;
  
         findDuplicate2(arr, arr_size);
-        
-        
         
         System.out.println("The duplicate element is " + findDuplicate(nums));
         usingXOR(nums);

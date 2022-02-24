@@ -1,4 +1,4 @@
-package a.arrays.s2;
+package a.arrays.s1;
 
 
 /*
@@ -7,7 +7,10 @@ package a.arrays.s2;
 Examples : 
 
 Input  : arr[] = {10, 20, 10, 5, 15}
-Output : prefixSum[] = {10, 30, 40, 45, 60}
+Output : 
+prefixSum[] 
+={10,10+20=30,30+10=40,40+5=45,45+15=60}
+= {10, 30, 40, 45, 60}
 
 Explanation : While traversing the array, update 
 the element by adding it with its previous element.
@@ -16,7 +19,7 @@ prefixSum[1] = prefixSum[0] + arr[1] = 30,
 prefixSum[2] = prefixSum[1] + arr[2] = 40 and so on. 
  
  * */
-public class PrefixSumArray {
+public class E_PrefixSumArray {
 	
 	// Fills prefix sum array
     static void fillPrefixSum(int arr[], int n,

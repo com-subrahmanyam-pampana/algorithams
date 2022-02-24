@@ -1,4 +1,4 @@
-package a.arrays.s3;
+package a.arrays.s2;
 
 import java.util.Arrays;
 
