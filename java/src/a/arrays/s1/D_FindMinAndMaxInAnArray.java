@@ -3,7 +3,7 @@ package a.arrays.s1;
 import java.util.Arrays;
 
 /*Find minimum and maximum elements in a given  array*/
-public class FindMinAndMaxInAnArray {
+public class D_FindMinAndMaxInAnArray {
 
 //////////////////////////////////////
 /////////Method1/////////////////////

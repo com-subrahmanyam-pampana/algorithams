@@ -1,7 +1,8 @@
 package a.arrays.s1;
 
 /*Travel all the elements in an array*/
-public class TravelAllArrayElements {
+/*TC always >=n */
+public class A_TravelAllArrayElements {
 
 //////////////////////////////////////
 /////////Method1/////////////////////
@@ -26,7 +27,6 @@ public class TravelAllArrayElements {
 	public static void main(String[] args) {
 		int[] myArray = new int[5];
 		myArray = new int[] { 1, 2, 3, 4, 5 };
-
 	}
 
 }

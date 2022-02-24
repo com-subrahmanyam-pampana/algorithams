@@ -3,7 +3,7 @@ package a.arrays.s1;
 import java.util.Arrays;
 
 /*Reverse a given array*/
-public class ReverseAnArray {
+public class C_ReverseAnArray {
 	static int[] reverse2(int[] array,int start,int end) {
 		/*Recursion technique to reverse an array */
 		if(start<end) {

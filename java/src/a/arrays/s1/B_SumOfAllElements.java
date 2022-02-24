@@ -4,7 +4,7 @@ package a.arrays.s1;
   Find sum of all elements in an given array. 
  */
 
-public class SumOfAllElements {
+public class B_SumOfAllElements {
 
 //////////////////////////////////////
 /////////Method1/////////////////////
