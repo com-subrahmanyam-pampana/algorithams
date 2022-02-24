@@ -1,8 +1,7 @@
 package b.trees;
 
 public class TreeTraversalExample {
-  
-	
+
 	public static class Node {
 		int item;
 		Node left, right;
