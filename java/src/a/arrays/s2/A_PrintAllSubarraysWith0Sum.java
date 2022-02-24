@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
  
-class PrintAllSubarraysWith0Sum
+class A_PrintAllSubarraysWith0Sum
 {
     // Utility function to insert <key, value> into the multimap
     private static<K, V> void insert(Map<K, List<V>> hashMap, K key, V value)
