@@ -1,4 +1,4 @@
-package a.strings.basics;
+package a.strings.s1;
 import java.util.Arrays;
 
 public class RemoveSpaceFromGivenString {

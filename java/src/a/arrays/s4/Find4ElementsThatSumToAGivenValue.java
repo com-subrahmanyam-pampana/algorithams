@@ -1,4 +1,4 @@
-package a.arrays.permutationsandcomb;
+package a.arrays.s4;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package a.strings.listofwords;
+package a.strings.s3;
 
 public class WordBreakProblem {
 

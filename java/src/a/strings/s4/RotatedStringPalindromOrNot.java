@@ -1,4 +1,4 @@
-package a.strings.palindrome;
+package a.strings.s4;
 
 public class RotatedStringPalindromOrNot {
 

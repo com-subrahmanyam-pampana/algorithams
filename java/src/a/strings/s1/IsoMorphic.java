@@ -1,4 +1,4 @@
-package a.strings.isomorphics;
+package a.strings.s1;
 
 import java.util.Arrays;
 

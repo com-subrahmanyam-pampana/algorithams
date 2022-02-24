@@ -1,4 +1,4 @@
-package a.strings.anagram;
+package a.strings.s1;
 
 import java.io.*;
 import java.util.*;

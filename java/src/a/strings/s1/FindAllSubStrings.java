@@ -1,4 +1,4 @@
-package a.strings.substring;
+package a.strings.s1;
 
 public class FindAllSubStrings {
 

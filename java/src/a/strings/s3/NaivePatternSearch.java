@@ -1,4 +1,4 @@
-package a.strings.patternsearching;
+package a.strings.s3;
 
 import java.util.Arrays;
 

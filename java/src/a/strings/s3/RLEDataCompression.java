@@ -1,4 +1,4 @@
-package a.strings.endoding;
+package a.strings.s3;
 
 public class RLEDataCompression {
 	// Perform Run–length encoding (RLE) data compression algorithm

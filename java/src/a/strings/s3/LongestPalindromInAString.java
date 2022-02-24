@@ -1,4 +1,4 @@
-package a.strings.palindrome.longestpalindromsubstring;
+package a.strings.s3;
 
 public class LongestPalindromInAString {
 	/********************/////// Brute Force///////////////*******************/

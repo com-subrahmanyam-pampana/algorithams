@@ -1,4 +1,4 @@
-package a.strings.palindrome;
+package a.strings.s1;
 
 import java.util.ArrayList;
 import java.util.Deque;

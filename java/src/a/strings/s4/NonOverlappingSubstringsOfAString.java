@@ -1,4 +1,4 @@
-package a.strings.combinations;
+package a.strings.s4;
 
 import java.util.*;
 

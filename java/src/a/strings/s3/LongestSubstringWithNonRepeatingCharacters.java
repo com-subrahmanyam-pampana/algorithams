@@ -1,4 +1,4 @@
-package a.strings.substring;
+package a.strings.s3;
 
 public class LongestSubstringWithNonRepeatingCharacters {
 

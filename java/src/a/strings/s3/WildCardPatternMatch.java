@@ -1,4 +1,4 @@
-package a.strings.patternmatching;
+package a.strings.s3;
 
 public class WildCardPatternMatch {
 

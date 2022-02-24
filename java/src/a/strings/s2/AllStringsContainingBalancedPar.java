@@ -1,4 +1,4 @@
-package a.strings.other.parentheses;
+package a.strings.s2;
 
 
 /*

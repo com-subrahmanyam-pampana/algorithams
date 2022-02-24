@@ -1,4 +1,4 @@
-package a.strings.slidingwindow;
+package a.strings.s4;
 
 
 //Given a string, find the longest substring containing distinct characters.

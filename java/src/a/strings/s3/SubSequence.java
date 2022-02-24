@@ -1,4 +1,4 @@
-package a.strings.subsequences;
+package a.strings.s3;
 
 import java.util.ArrayList;
 import java.util.List;

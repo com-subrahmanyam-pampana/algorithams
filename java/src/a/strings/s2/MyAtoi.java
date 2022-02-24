@@ -1,4 +1,4 @@
-package a.strings.maths;
+package a.strings.s2;
 
 public class MyAtoi {
 

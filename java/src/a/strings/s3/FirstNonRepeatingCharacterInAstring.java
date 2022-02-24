@@ -1,4 +1,4 @@
-package a.strings;
+package a.strings.s3;
 
 public class FirstNonRepeatingCharacterInAstring {
 	
