@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e2;
 /*
  A1=[1,2,3,4]
 A2=[3,4]
@@ -6,7 +6,7 @@ A2=[3,4]
  * */
 import java.util.List;
 
-public class Q_CheckIfArrayIsASubSequency {
+public class G_CheckIfArrayIsASubSequency {
 
 	boolean isValidSubsequence(List<Integer> array, List<Integer> sequence) {
 		int l1 = array.size();

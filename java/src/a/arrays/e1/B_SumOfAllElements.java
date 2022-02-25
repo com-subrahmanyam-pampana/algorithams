@@ -1,14 +1,10 @@
-package a.arrays.s1;
+package a.arrays.e1;
 
 /*
   Find sum of all elements in an given array. 
  */
 
 public class B_SumOfAllElements {
-
-//////////////////////////////////////
-/////////Method1/////////////////////
-/////////////////////////////////////
 
 	private static int recursion1(int[] myArray, int sum, int index) {
 		if (index < 0) {
@@ -18,10 +14,6 @@ public class B_SumOfAllElements {
 		}
 	}
 
-//////////////////////////////////////
-/////////Method2/////////////////////
-/////////////////////////////////////
-
 	private static int recursion2(int[] myArray, int l, int h) {
 		if (l == h) {
 			return myArray[l];
@@ -29,10 +21,6 @@ public class B_SumOfAllElements {
 			return (myArray[l] + recursion2(myArray, l + 1, h));
 		}
 	}
-
-//////////////////////////////////////
-/////////Method3/////////////////////
-/////////////////////////////////////
 
 	private static int iteration1(int[] myArray) {
 		int sum = 0;
@@ -43,9 +31,6 @@ public class B_SumOfAllElements {
 		return sum;
 	}
 
-//////////////////////////////////////
-/////////Main/////////////////////
-/////////////////////////////////////
 	public static void main(String[] args) {
 
 		int[] myArray = new int[5];

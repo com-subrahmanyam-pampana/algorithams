@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e1;
 
 
 /*

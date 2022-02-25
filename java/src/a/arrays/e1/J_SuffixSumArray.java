@@ -1,11 +1,11 @@
-package a.arrays.s1;
+package a.arrays.e1;
 
 
 /*
- { 1, 2, 3, 4 }
- Then suffex producr ={24,24,12,4}
+ { 10, 4, 16, 20 } 
+ Ouput={50,40,36,20}
  * */
-public class I_SuffixProductArray {
+public class J_SuffixSumArray {
 	// Fills suffix sum array
     static void fillSuffixSum(int arr[], int n,int prefixSum[])
     {
@@ -13,14 +13,14 @@ public class I_SuffixProductArray {
         // Adding present element
         // with previous element
         for (int i = n-2; i >= 0; i--) {
-        	 prefixSum[i] = prefixSum[i + 1] *arr[i];
+        	 prefixSum[i] = prefixSum[i + 1] + arr[i];
         }     
     }
  
     // Driver code
     public static void main(String[] args)
     {
-        int arr[] = { 1, 2, 3, 4 };
+        int arr[] = { 10, 4, 16, 20 };
         int n = arr.length;
         int prefixSum[] = new int[n];
  

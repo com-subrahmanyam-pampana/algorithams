@@ -1,6 +1,6 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
-public class L_CheckIfItIsASubArray {
+public class B_CheckIfItIsASubArray {
 	
 	
 //////////////////////////////////////

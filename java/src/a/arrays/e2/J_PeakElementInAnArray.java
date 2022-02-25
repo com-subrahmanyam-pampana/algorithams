@@ -1,6 +1,6 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
-public class T_PeakElementInAnArray {
+public class J_PeakElementInAnArray {
 	static int findPeak(int arr[], int n)
 	{
 	     

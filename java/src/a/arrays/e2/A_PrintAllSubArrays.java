@@ -1,6 +1,6 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
-public class K_PrintAllSubArrays {
+public class A_PrintAllSubArrays {
 
 	static void printAllSubArrays(int[] arrA) {
 		int arrSize = arrA.length;

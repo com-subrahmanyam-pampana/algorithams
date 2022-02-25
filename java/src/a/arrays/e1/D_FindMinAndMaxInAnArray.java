@@ -1,14 +1,10 @@
-package a.arrays.s1;
+package a.arrays.e1;
 
 import java.util.Arrays;
 
 /*Find minimum and maximum elements in a given  array*/
 public class D_FindMinAndMaxInAnArray {
-
-//////////////////////////////////////
-/////////Method1/////////////////////
-/////////////////////////////////////
-
+	
 	private static void minMaxInanArray(int[] myArray) {
 		int max = myArray[0];
 		int min = myArray[0];
@@ -23,10 +19,6 @@ public class D_FindMinAndMaxInAnArray {
 		System.out.println(max);
 		System.out.println(min);
 	}
-
-//////////////////////////////////////
-/////////Method2/////////////////////
-/////////////////////////////////////
 
 	private static void minMaxInanArray2(int[] myArray) {
 
@@ -79,10 +71,6 @@ public class D_FindMinAndMaxInAnArray {
 		}
 	}
 
-//////////////////////////////////////
-/////////Method3/////////////////////
-/////////////////////////////////////
-
 	static int recursion1(int[] myArray, int i, int minValue) {
 		// Get Min value
 		if (i < 0) {
@@ -97,9 +85,7 @@ public class D_FindMinAndMaxInAnArray {
 		test();
 	}
 
-//////////////////////////////////////
-/////////Method3/////////////////////
-/////////////////////////////////////
+
 
 	static void test() {
 		/* Iteration */

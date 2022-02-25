@@ -1,4 +1,4 @@
-package a.strings.s3;
+package a.strings.standardalgorithams;
 
 public class RabinKarpAlgorithm {
 	public final static int d = 10;

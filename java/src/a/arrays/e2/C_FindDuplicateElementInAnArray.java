@@ -1,6 +1,6 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
-public class M_FindDuplicateElementInAnArray {
+public class C_FindDuplicateElementInAnArray {
 	
 	
 	 // Function to find a duplicate element in a limited range array

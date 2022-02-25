@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
 import java.util.HashSet;
 
@@ -13,7 +13,7 @@ Output: 5 [5 is the first element that repeats]
 Input:  arr[] = {6, 10, 5, 4, 9, 120, 4, 6, 10}
 Output: 6 [6 is the first element that repeats]
  * */
-public class S_FirstRepeatingElementInAnArray {
+public class I_FirstRepeatingElementInAnArray {
 	// This function prints the first repeating element in arr[]
 	static void printFirstRepeating(int arr[]) {
 		// Initialize index of first repeating element

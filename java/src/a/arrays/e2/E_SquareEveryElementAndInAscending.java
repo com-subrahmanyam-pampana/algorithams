@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ Input: [ -3, -2, -1,1,4]
 Output: [1,1,4,9,16]
 
  * */
-public class O_SquareEveryElementAndInAscending {
+public class E_SquareEveryElementAndInAscending {
 
 //////////////////////////////////////
 /////////Method1/////////////////////

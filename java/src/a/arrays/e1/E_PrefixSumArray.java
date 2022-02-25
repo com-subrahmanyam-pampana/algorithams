@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e1;
 
 
 /*
@@ -27,13 +27,13 @@ public class E_PrefixSumArray {
     {
         prefixSum[0] = arr[0];
  
-        // Adding present element
-        // with previous element
+        /* Adding present element
+         with previous element*/
         for (int i = 1; i < n; ++i)
             prefixSum[i] = prefixSum[i - 1] + arr[i];
     }
  
-    // Driver code
+    
     public static void main(String[] args)
     {
         int arr[] = { 10, 4, 16, 20 };

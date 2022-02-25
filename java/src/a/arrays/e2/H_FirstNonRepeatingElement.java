@@ -1,4 +1,4 @@
-package a.arrays.s1;
+package a.arrays.e2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ repeat is : 3
 Input : 9 4 9 6 7 4
 Output : 6
  * */
-public class R_FirstNonRepeatingElement {
+public class H_FirstNonRepeatingElement {
 	static int firstNonRepeating(int arr[], int n)
     {
         for (int i = 0; i < n; i++) {
