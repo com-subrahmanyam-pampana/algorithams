@@ -93,6 +93,8 @@ public class CircularQueue {
 	    q.enQueue(6);
 
 	    q.display();
+	    
+	    System.out.println("...................Deque..............");
 
 	    int elem = q.deQueue();
 

@@ -1,4 +1,4 @@
-package ds.d_quees.circular.arraycircular;
+package ds.d_quees.b_circular.arraycircular;
 
 public class CircularQueue {
 	
@@ -15,7 +15,7 @@ public class CircularQueue {
 		queue.enQueue(98);
 		queue.enQueue(68);
 		queue.enQueue(68);
-		
+		queue.printArray();
 		queue.print();
 	
 	}

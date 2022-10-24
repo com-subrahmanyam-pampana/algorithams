@@ -1,4 +1,6 @@
-package ds.d_quees.circular.arraycircular;
+package ds.d_quees.b_circular.arraycircular;
+
+
 
 import java.util.Arrays;
 
@@ -6,7 +8,6 @@ public class Queue {
 	private int size, front, rear;
 	private  int[] queue;
 	 
-
 	Queue(int size)
 	{
 	    this.size = size;
@@ -17,14 +18,29 @@ public class Queue {
 	
 	 void enQueue(int data)
 	{
-	     
-	    // Condition if queue is full.
-	    if((front == 0 && rear == size - 1) ||
-	      (rear == (front - 1) % (size - 1)))
+	    if((front == 0 && rear == size - 1))
 	    {
+	    	/*Queue is full*/
+	    	/*
+	    	 * 12, 45 ,56 ,78
+	    	 * 
+	    	 * F           R
+	    	 * 
+	    	 * */
 	        System.out.print("Queue is Full");
+	    }else if( rear == (front - 1) % (size - 1)) {
+	    	/*Queue is full*/
+	    	/*
+	    	 * 12, 45 ,56 ,78
+	    	 * 
+	    	 *      R   F
+	    	 * 
+	    	 * */
+	    	//real=1
+	    	//(2-1)%(4-1)=1%3=1
+	    	System.out.print("Queue is Full");
+	    	
 	    }
-	 
 	    // condition for empty queue.
 	    else if(front == -1)
 	    {
@@ -34,7 +50,13 @@ public class Queue {
 	    }
 	 
 	    else if(rear == size - 1 && front != 0)
-	    {
+	    {   /*Queue is full*/
+	    	/*
+	    	 *  __, 45 ,56 ,78
+	    	 * 
+	    	 *      F       R
+	    	 * 
+	    	 * */
 	        rear = 0;
 	        queue[rear]= data;
 	    }
@@ -42,37 +64,30 @@ public class Queue {
 	    else
 	    {
 	        rear = (rear + 1);
-	     
-	        // Adding a new element if
+	        
 	        if(front <= rear)
 	        {
 	            queue[rear]= data;
 	        }
-	     
-	        // Else updating old value
 	        else
-	        {
+	        {//update the old value
 	            queue[rear]= data;
 	        }
 	    }
 	}
 	 
-	int deQueue()
+	public int  deQueue()
 	{
-	    int temp;
-	 
-	    // Condition for empty queue.
+	    int dequeElement;
 	    if(front == -1)
 	    {
 	        System.out.print("Queue is Empty");
-	         
-	        // Return -1 in case of empty queue
 	        return -1;
 	    }
 	 
-	    temp = queue[front];
+	    dequeElement = queue[front];
 	 
-	    // Condition for only one element
+	    // only one element present
 	    if(front == rear)
 	    {
 	        front = -1;
@@ -88,32 +103,27 @@ public class Queue {
 	        front = front + 1;
 	    }
 	     
-	    // Returns the dequeued element
-	    return temp;
+	    return dequeElement;
 	}
 	 
-	// Method to display the elements of queue
+	
+	
+	
 	public void print()
 	{
 	     
-	    // Condition for empty queue.
 	    if(front == -1)
 	    {
 	        System.out.print("Queue is Empty");
 	        return;
 	    }
 	 
-	    // If rear has not crossed the max size
-	    // or queue rear is still greater then
-	    // front.
-	    System.out.print("Elements in the " +
-	                     "circular queue are: ");
+	    
 	 
 	    if(rear >= front)
 	    {
 	     
-	        // Loop to print elements from
-	        // front to rear.
+	        // Loop  elements from front to rear.
 	        for(int i = front; i <= rear; i++)
 	        {
 	            System.out.print(queue[i]);
@@ -122,21 +132,20 @@ public class Queue {
 	        System.out.println();
 	    }
 	 
-	    // If rear crossed the max index and
-	    // indexing has started in loop
+	    // If rear crossed the max index and indexing has started in loop
 	    else
 	    {
 	         
-	        // Loop for printing elements from
-	        // front to max size or last index
+	        
+	        //Loop  front to max size or last index
 	        for(int i = front; i < size; i++)
 	        {
 	            System.out.print(queue[i]);
 	            System.out.print(" ");
 	        }
 	 
-	        // Loop for printing elements from
-	        // 0th index till rear position
+	        
+	        // Loop from 0th index till rear 
 	        for(int i = 0; i <= rear; i++)
 	        {
 	            System.out.print(queue[i]);
@@ -144,6 +153,12 @@ public class Queue {
 	        }
 	        System.out.println();
 	    }
+	
+	}
+	
+
+	public void printArray() {
+		System.out.println(Arrays.toString(queue));	
 	}	
 	
 }
