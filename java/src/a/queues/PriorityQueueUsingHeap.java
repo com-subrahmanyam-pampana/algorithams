@@ -90,6 +90,6 @@ public class PriorityQueueUsingHeap {
 	    System.out.println("After deleting an element: ");
 	    h.printArray(array, size);
 	  }
-	}
+}
 
 
